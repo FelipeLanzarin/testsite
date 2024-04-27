@@ -1,95 +1,142 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Head from 'next/head';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
+    <div className="container">
+      <main className={styles.main}>
+        <h1 className="title">Bem-vindo à Baguals Corporation</h1>
+
+        <p className="description">Seu parceiro confiável em soluções tecnológicas.</p>
+
+        <div className="grid">
+          <a href="#" className="card">
+            <h3>Sobre Nós &rarr;</h3>
+            <p>Conheça mais sobre a história e valores da Baguals Corporation.</p>
+          </a>
+
+          <a href="#" className="card">
+            <h3>Nossos Serviços &rarr;</h3>
+            <p>Descubra os serviços que oferecemos para nossos clientes.</p>
+          </a>
+
+          <a href="#" className="card">
+            <h3>Entre em Contato &rarr;</h3>
+            <p>Entre em contato conosco para mais informações.</p>
+          </a>
+        </div>
+        <footer>
           <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
+          &copy; 2024 Baguals Corporation. Todos os direitos reservados.
           </a>
-        </div>
-      </div>
+        </footer>
+        <style>{`
+          .container {
+            min-height: 100vh;
+            padding: 0 0.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+          main {
+            padding: 5rem 0;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+          footer {
+            width: 100%;
+            height: 100px;
+            border-top: 1px solid #eaeaea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+          footer img {
+            margin-left: 0.5rem;
+          }
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
+          footer a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          a {
+            color: inherit;
+            text-decoration: none;
+          }
+
+          .title {
+            margin: 0;
+            line-height: 1.15;
+            font-size: 4rem;
+          }
+
+          .title,
+          .description {
+            text-align: center;
+          }
+
+          .grid {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin-top: 3rem;
+          }
+
+          .card {
+            margin: 1rem;
+            flex-basis: 45%;
+            padding: 1.5rem;
+            text-align: left;
+            color: inherit;
+            text-decoration: none;
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+            transition: color 0.15s ease, border-color 0.15s ease;
+          }
+
+          .card:hover,
+          .card:focus,
+          .card:active {
+            color: #0070f3;
+            border-color: #0070f3;
+          }
+
+          .card h3 {
+            margin: 0 0 1rem 0;
+            font-size: 1.5rem;
+          }
+
+          .card p {
+            margin: 0;
+            font-size: 1.25rem;
+            line-height: 1.5;
+          }
+
+          @media (max-width: 600px) {
+            .grid {
+              width: 100%;
+              flex-direction: column;
+            }
+          }
+        `}</style>
+      </main>
+    </div>
+   
   );
 }
