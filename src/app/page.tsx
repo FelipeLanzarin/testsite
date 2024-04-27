@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="container">
       <main className={styles.main}>
-        <h1 className="title">Bem-vindo à Baguals Corporation</h1>
+        <h1 className="title">Teste do Lanza</h1>
 
         <p className="description">Seu parceiro confiável em soluções tecnológicas.</p>
 
